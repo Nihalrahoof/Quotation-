@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,600,700">
+    <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="css/style.css?v=1.0">
+    <link media="all" type="text/css" rel="stylesheet" href="css/sidebar-menu.css?v=1.0">
+    <link media="all" type="text/css" rel="stylesheet" href="css/custom.css?v=1.3.3">
+
+    <style>
+
+        h2 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+
+        }
+        .table {
+    background-color: rgb(181 35 35 / 20%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+}
+        .table thead th {
+         background-color: rgba(255, 255, 255, 0.20);
+
+}
+
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 500;
+        }
+        .table th {
+            background-color: rgba(255, 255, 255, 0.20);
+            border: none;
+            font-size: 14px;
+            padding: 12px;
+
+        }
+
+
+        #taskFormContainer{
+            background-color: rgba(255, 255, 255, 0.01);
+            border: none;
+            padding: 12px;
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+        }
+        .table-bordered th {
+            background-color: #f8f9fa;
+        }
+
+        #quotationTableBody tr:hover {
+            background-color: rgba(255, 255, 255, 0.40);
+        }
+        #totalPrice {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: rgba(241,194,125,.3) !important;
+        }
+    </style>
+</head>
+<body class="tooltips">
+<div class="container">
+
+    <div class="header content rows-content-header">
+        <button class="button-menu-mobile show-sidebar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav visible-lg visible-md limit-chars">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="index.html">
+                                    <i class="zmdi zmdi-view-dashboard zmdi-hc-fw" title="Dashboard"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="manage-product.html">
+                                    <i class="zmdi zmdi-assignment zmdi-hc-fw" title="Products"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="customers.html">
+                                    <i class="zmdi zmdi-accounts zmdi-hc-fw" title="Customers"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right content-page">
+        <div class="body content rows scroll-y">
+            <div class="box-info full" id="customerListContainer">
+                <h2>Customers</h2>
+                <div class="panel-body pt-0">
+                    <div class="row mb-4">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-sm btn-secondary pull-right ml-2" id="sortByDateAdded">
+                                Sort by Date Added
+                            </button>
+                            <button type="button" class="btn btn-sm btn-secondary pull-right" id="sortByName">
+                                Sort by Name
+                            </button>
+                        </div>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Customer Name</th>
+                                <th>Total Price</th>
+                                <th>Action</th> <!-- Example action column -->
+                            </tr>
+                        </thead>
+                        <tbody id="customerListTableBody">
+                            <!-- Dynamic rows will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="js/packages/jquery.min.js"></script>
+<script src="js/custom/common.js"></script>
+<script src="js/custom/customers.js"></script>
+<script src="js/packages/bootstrap.min.js"></script>
+</body>
+</html>
